@@ -10,6 +10,7 @@ def readGraphFromFile(filename):
             for line in f:
                 l.append(line.split())
     except FileNotFoundError:
+        print(f"...skipping {filename}, file not found")
         return None
     return Graph(l, format="list_of_edges")
 

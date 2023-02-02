@@ -1,27 +1,30 @@
 # perfect-sts
 
-## Definitions
+# Definitions
 
 - Steiner Triples System (STS): Point set [0..n-1], set B of triples (blocks, lines).
 - Perfect STS of size 7, 9, 25, 33, 79, 139, 367, 811, 1531, 25771, 50923, 61339, 69991
 - Automorphism group, block transitive automorphism group
 - Examples
 
-## Goals
+# Usage
 
-# TODO
+Clone the repo, then
 
-## 15/01/2023
+```sh
+cd perfect-sts
 
-- Based on the papers [...] we can generate the known perfect STS, see `generate_sts*.py`. Store them in the file `sts$n.txt` by listing the blocks. 
-- We can read them by `graph_from_sts.py` and generate the cubic graph corresponding to the first block. The cubic graphs are saved in `graph$n.txt`.
-- In `edge_colorings.sage.py`, we read the cubic graphs, and compute the number of colorings of their line graph with three colors. We print the number of colorings, divided by 6=3!. 
-- We save the results for orders 7,9,25,33,79 in the files `findings$n.txt`. For order 139, no results were found in 8 hours of CPU time.
-- Usage: `cd [...]/perfect-sts && sage edge_colorings.sage.py`
+python3 generate_sts25.py
+python3 generate_sts33.py
+python3 generate_sts_large_.py #takes long
 
-## 31/01/2023
+python3 graph_from_sts.py #takes long
 
-- `edge_colorings.sage.py` uses Knuth's DLX. With `count_only==True`, the search tree is traversed, without saving the results. 
-- For n<=79, we want to compute all colorings and study the resulting cubic graphs and STSs. 
-  
+sage edge_coloring.sage.py #takes long
+```
+
 # References
+
+[1] M. J. Grannell, T. S. Griggs, and J. P. Murphy, “Some new perfect Steiner triple systems,” J. Combin. Designs, vol. 7, no. 5, pp. 327–330, 1999, doi: 10.1002/(SICI)1520-6610(1999)7:5<327::AID-JCD3>3.0.CO;2-S.
+
+[2] A. D. Forbes, M. J. Grannell, and T. S. Griggs, “On 6-sparse Steiner triple systems,” Journal of Combinatorial Theory, Series A, vol. 114, no. 2, pp. 235–252, Feb. 2007, doi: 10.1016/j.jcta.2006.04.003.

@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+
 def no(x):
 	return str(x%33)
 
-with open("sts33.txt", "w") as f:
+with open("sts/sts33.txt", "w") as f:
 	for i in range(33):
 		f.write( no(i) + " " + no(i+1) + " " + no(i+7) + "\n")
 		f.write( no(i) + " " + no(i+2) + " " + no(i+21) + "\n")

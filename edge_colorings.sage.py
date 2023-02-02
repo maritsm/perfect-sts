@@ -16,14 +16,14 @@ def readGraphFromFile(filename):
 
 def printFinding(v, x):
     print(f"The edge graph of STS({v}) has {x} distinct coloring(s)")
-    with open("findings" + str(v) + ".txt", "w") as f:
+    with open("findings/findings" + str(v) + ".txt", "w") as f:
         f.write(str(x))
 
 if __name__ == "__main__":
     findings = {}
     for v in STS_NUMBERS:
         print(f"Graph for STS({v})")
-        G = readGraphFromFile("graph" + str(v) + ".txt")
+        G = readGraphFromFile("graphs/graph" + str(v) + ".txt")
         if G == None:
             continue
         L = sage.graphs.line_graph.line_graph(G)

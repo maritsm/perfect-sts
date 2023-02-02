@@ -14,4 +14,3 @@
 
 - `edge_colorings.sage.py` uses Knuth's DLX. With `count_only==True`, the search tree is traversed, without saving the results. 
 - For n<=79, we want to compute all colorings and study the resulting cubic graphs and STSs. 
-  

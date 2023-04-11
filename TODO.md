@@ -14,3 +14,12 @@
 
 - `edge_colorings.sage.py` uses Knuth's DLX. With `count_only==True`, the search tree is traversed, without saving the results. 
 - For n<=79, we want to compute all colorings and study the resulting cubic graphs and STSs. 
+
+## 2023-04-11
+
+folyt köv: 
+- a 3-szín-élszínezésekből újra STS-t csinálni
+- ellenőrizni ezek izomorfiáját
+- save(des,"/tmp/bubu.sobj"), load("/tmp/bubu.sobj")
+- perfektség ellenőrzés: minden pontpárra a 2 szín uniója Hamilton-kör
+- PermutationGroupElement

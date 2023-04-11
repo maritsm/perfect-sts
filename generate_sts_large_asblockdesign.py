@@ -35,12 +35,3 @@ gra = graph_from_sts(des,bls[0])
 lgra = gra.line_graph()
 
 cols = [c for c in sage.graphs.graph_coloring.all_graph_colorings(lgra,3)]
-
-
-
-# folyt köv: 
-# - a 3-szín-élszínezésekből újra STS-t csinálni
-# - ellenőrizni ezek izomorfiáját
-# - save(des,"/tmp/bubu.sobj"), load("/tmp/bubu.sobj")
-# - perfektség ellenőrzés: minden pontpárra a 2 szín uniója Hamilton-kör
-# - PermutationGroupElement
